@@ -98,7 +98,7 @@
           (when (and (string= (f-ext fname) "org")
                      (not (member fname fns)))
             (push fname fns)))
-    fns))
+    (sort fns 'string<)))
 
 
 (defun helm-org-files-file-file (name)
